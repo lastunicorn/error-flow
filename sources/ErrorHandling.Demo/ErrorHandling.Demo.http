@@ -1,6 +1,0 @@
-@ErrorHandling.Demo_HostAddress = http://localhost:5261
-
-GET {{ErrorHandling.Demo_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

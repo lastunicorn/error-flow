@@ -2,12 +2,12 @@
 
 namespace DustInTheWind.AspNetCore.ErrorHandling;
 
-internal class ExceptionHandlingMiddleware
+internal class ErrorHandlingMiddleware
 {
     private readonly RequestDelegate next;
     private readonly ExceptionsHandler exceptionHandler;
 
-    public ExceptionHandlingMiddleware(RequestDelegate next, ExceptionsHandler exceptionHandler)
+    public ErrorHandlingMiddleware(RequestDelegate next, ExceptionsHandler exceptionHandler)
     {
         this.next = next ?? throw new ArgumentNullException(nameof(next));
         this.exceptionHandler = exceptionHandler ?? throw new ArgumentNullException(nameof(exceptionHandler));

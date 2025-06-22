@@ -5,6 +5,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <AssemblyName>DustInTheWind.AspNetCore.$(MSBuildProjectName)</AssemblyName>
         <RootNamespace>DustInTheWind.AspNetCore.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+        
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Version>1.0.1</Version>
+        <Authors>lastunicorn</Authors>
+        <Company>DustInTheWind</Company>
+        <Description>A framework to easily handle exceptions and translate them to HTTP responses in a Web API application.</Description>
     </PropertyGroup>
 
     <ItemGroup>

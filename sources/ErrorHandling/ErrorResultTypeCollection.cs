@@ -21,7 +21,7 @@ internal class ErrorResultTypeCollection
 
     private static bool IsExceptionType(Type exceptionType)
     {
-        return exceptionType.IsSubclassOf(typeof(Exception));
+        return exceptionType.IsSubclassOf(typeof(Exception)) || exceptionType == typeof(Exception);
     }
 
     private static bool IsErrorResultType(Type exceptionType, Type errorResultType)
