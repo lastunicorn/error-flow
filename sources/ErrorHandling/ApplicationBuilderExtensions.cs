@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace DustInTheWind.AspNetCore.ErrorHandling;
+namespace DustInTheWind.ErrorHandling.AspNetCore;
 
 public static class ApplicationBuilderExtensions
 {
-    public static IApplicationBuilder UseErrorHandlers(this IApplicationBuilder app)
+    public static IApplicationBuilder UseErrorHandling(this IApplicationBuilder app)
     {
         return app.UseMiddleware<ErrorHandlingMiddleware>();
     }

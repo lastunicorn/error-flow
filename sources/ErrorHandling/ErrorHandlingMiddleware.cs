@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DustInTheWind.ErrorHandling.AspNetCore.Core;
+using Microsoft.AspNetCore.Http;
 
-namespace DustInTheWind.AspNetCore.ErrorHandling;
+namespace DustInTheWind.ErrorHandling.AspNetCore;
 
 internal class ErrorHandlingMiddleware
 {
     private readonly RequestDelegate next;
-    private readonly ExceptionsHandler exceptionHandler;
+    private readonly ErrorHandlingEngine exceptionHandler;
 
-    public ErrorHandlingMiddleware(RequestDelegate next, ExceptionsHandler exceptionHandler)
+    public ErrorHandlingMiddleware(RequestDelegate next, ErrorHandlingEngine exceptionHandler)
     {
         this.next = next ?? throw new ArgumentNullException(nameof(next));
         this.exceptionHandler = exceptionHandler ?? throw new ArgumentNullException(nameof(exceptionHandler));
