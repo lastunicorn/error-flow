@@ -13,8 +13,24 @@
         <Company>Dust in the Wind</Company>
         <Copyright>Copyright © 2025 Dust in the Wind</Copyright>
         <Description>A framework to easily handle exceptions and translate them to HTTP responses in a Web API application.</Description>
+
+        <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/lastunicorn/error-flow</RepositoryUrl>
+        
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
