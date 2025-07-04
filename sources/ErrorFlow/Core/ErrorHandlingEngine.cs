@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Reflection;
 
-namespace DustInTheWind.ErrorHandling.AspNetCore.Core;
+namespace DustInTheWind.ErrorFlow.AspNetCore.Core;
 
 internal class ErrorHandlingEngine
 {

@@ -1,4 +1,4 @@
-﻿namespace DustInTheWind.ErrorHandling.AspNetCore;
+﻿namespace DustInTheWind.ErrorFlow.AspNetCore;
 
 [Serializable]
 internal class UnhandledErrorException : Exception

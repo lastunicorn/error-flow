@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace DustInTheWind.ErrorHandling.AspNetCore;
+namespace DustInTheWind.ErrorFlow.AspNetCore;
 
 public interface IErrorHandler<in T>
     where T : Exception

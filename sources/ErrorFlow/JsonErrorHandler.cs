@@ -2,7 +2,7 @@
 using System.Net;
 using System.Text.Json;
 
-namespace DustInTheWind.ErrorHandling.AspNetCore;
+namespace DustInTheWind.ErrorFlow.AspNetCore;
 
 public abstract class JsonErrorHandler<TException, TResponseBody> : IErrorHandler<TException>
     where TException : Exception

@@ -1,8 +1,8 @@
-﻿using DustInTheWind.ErrorHandling.AspNetCore.Core;
+﻿using DustInTheWind.ErrorFlow.AspNetCore.Core;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace DustInTheWind.ErrorHandling.AspNetCore;
+namespace DustInTheWind.ErrorFlow.AspNetCore;
 
 public class ErrorHandlingConfiguration
 {
@@ -20,9 +20,9 @@ public class ErrorHandlingConfiguration
     public ErrorHandlingConfiguration AddErrorHandlersFromAssembly(params Assembly[] assemblies)
     {
         IEnumerable<(Type, Type)> errorHandlers = assemblies
-                  .Where(x => x is not null)
-                  .SelectMany(x => x.GetTypes())
-                  .SelectMany(EnumerateErrorHandlerTypes);
+            .Where(x => x is not null)
+            .SelectMany(x => x.GetTypes())
+            .SelectMany(EnumerateErrorHandlerTypes);
 
         foreach ((Type errorType, Type errorHandlerType) in errorHandlers)
         {
@@ -45,7 +45,7 @@ public class ErrorHandlingConfiguration
         Type errorHandlerInterfaceType = typeof(IErrorHandler<>);
 
         IEnumerable<Type> implementedInterfaces = type.GetInterfaces()
-                .Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == errorHandlerInterfaceType);
+            .Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == errorHandlerInterfaceType);
 
         foreach (Type implementedInterface in implementedInterfaces)
         {

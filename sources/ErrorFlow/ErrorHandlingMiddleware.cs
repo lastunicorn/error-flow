@@ -1,7 +1,7 @@
-﻿using DustInTheWind.ErrorHandling.AspNetCore.Core;
+﻿using DustInTheWind.ErrorFlow.AspNetCore.Core;
 using Microsoft.AspNetCore.Http;
 
-namespace DustInTheWind.ErrorHandling.AspNetCore;
+namespace DustInTheWind.ErrorFlow.AspNetCore;
 
 internal class ErrorHandlingMiddleware
 {

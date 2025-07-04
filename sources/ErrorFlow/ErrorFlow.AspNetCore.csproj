@@ -7,9 +7,12 @@
         <RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
         
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Product>Error Flow</Product>
         <Version>1.1.3</Version>
         <Authors>lastunicorn</Authors>
-        <Company>DustInTheWind</Company>
+        <Company>Dust in the Wind</Company>
+        <Copyright>Copyright © 2025 Dust in the Wind</Copyright>
+        <Copyright></Copyright>
         <Description>A framework to easily handle exceptions and translate them to HTTP responses in a Web API application.</Description>
     </PropertyGroup>
 

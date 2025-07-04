@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace DustInTheWind.ErrorHandling.AspNetCore;
+namespace DustInTheWind.ErrorFlow.AspNetCore;
 
 public static class ApplicationBuilderExtensions
 {

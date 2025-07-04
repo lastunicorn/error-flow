@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DustInTheWind.ErrorFlow.AspNetCore;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace DustInTheWind.ErrorHandling.AspNetCore.DependencyInjection;
+namespace DustInTheWind.ErrorFlow.AspNetCore.DependencyInjection;
 
 public static class ServiceCollectionExtensions
 {
