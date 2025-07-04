@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Http;
 
 namespace DustInTheWind.ErrorFlow.AspNetCore;
 
-internal class ErrorHandlingMiddleware
+internal class ErrorFlowMiddleware
 {
     private readonly RequestDelegate next;
     private readonly ErrorHandlingEngine exceptionHandler;
 
-    public ErrorHandlingMiddleware(RequestDelegate next, ErrorHandlingEngine exceptionHandler)
+    public ErrorFlowMiddleware(RequestDelegate next, ErrorHandlingEngine exceptionHandler)
     {
         this.next = next ?? throw new ArgumentNullException(nameof(next));
         this.exceptionHandler = exceptionHandler ?? throw new ArgumentNullException(nameof(exceptionHandler));

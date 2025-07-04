@@ -4,12 +4,12 @@ using System.Reflection;
 
 namespace DustInTheWind.ErrorFlow.AspNetCore;
 
-public class ErrorHandlingConfiguration
+public class ErrorFlowConfiguration
 {
     private readonly IServiceCollection serviceCollection;
     private readonly ErrorHandlingEngine engine;
 
-    public ErrorHandlingConfiguration(IServiceCollection serviceCollection)
+    public ErrorFlowConfiguration(IServiceCollection serviceCollection)
     {
         this.serviceCollection = serviceCollection ?? throw new ArgumentNullException(nameof(serviceCollection));
         engine = new ErrorHandlingEngine();
@@ -17,7 +17,7 @@ public class ErrorHandlingConfiguration
         serviceCollection.AddSingleton(engine);
     }
 
-    public ErrorHandlingConfiguration AddErrorHandlersFromAssembly(params Assembly[] assemblies)
+    public ErrorFlowConfiguration AddErrorHandlersFromAssembly(params Assembly[] assemblies)
     {
         IEnumerable<(Type, Type)> errorHandlers = assemblies
             .Where(x => x is not null)
@@ -33,7 +33,7 @@ public class ErrorHandlingConfiguration
         return this;
     }
 
-    public ErrorHandlingConfiguration AddDefaultErrorHandler(Type defaultErrorHandlerType)
+    public ErrorFlowConfiguration AddDefaultErrorHandler(Type defaultErrorHandlerType)
     {
         engine.DefaultErrorHandlerType = defaultErrorHandlerType;
 

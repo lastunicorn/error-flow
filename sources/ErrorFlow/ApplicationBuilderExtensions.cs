@@ -4,8 +4,8 @@ namespace DustInTheWind.ErrorFlow.AspNetCore;
 
 public static class ApplicationBuilderExtensions
 {
-    public static IApplicationBuilder UseErrorHandling(this IApplicationBuilder app)
+    public static IApplicationBuilder UseErrorFlow(this IApplicationBuilder app)
     {
-        return app.UseMiddleware<ErrorHandlingMiddleware>();
+        return app.UseMiddleware<ErrorFlowMiddleware>();
     }
 }
