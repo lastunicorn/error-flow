@@ -17,6 +17,20 @@ public class ErrorFlowConfiguration
         serviceCollection.AddSingleton(engine);
     }
 
+    public ErrorFlowConfiguration AddErrorHandlersFromAssemblyContaining(Type type)
+    {
+        Assembly assembly = type?.Assembly
+            ?? throw new ArgumentNullException(nameof(type), "Type cannot be null.");
+
+        return AddErrorHandlersFromAssembly(assembly);
+    }
+
+    public ErrorFlowConfiguration AddErrorHandlersFromAssemblyContaining<T>()
+    {
+        Assembly assembly = typeof(T).Assembly;
+        return AddErrorHandlersFromAssembly(assembly);
+    }
+
     public ErrorFlowConfiguration AddErrorHandlersFromAssembly(params Assembly[] assemblies)
     {
         IEnumerable<(Type, Type)> errorHandlers = assemblies
@@ -36,6 +50,14 @@ public class ErrorFlowConfiguration
     public ErrorFlowConfiguration AddDefaultErrorHandler(Type defaultErrorHandlerType)
     {
         engine.DefaultErrorHandlerType = defaultErrorHandlerType;
+
+        return this;
+    }
+
+    public ErrorFlowConfiguration AddDefaultErrorHandler<T>()
+        where T : class, IErrorHandler<Exception>
+    {
+        engine.DefaultErrorHandlerType = typeof(T);
 
         return this;
     }

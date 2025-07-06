@@ -8,7 +8,7 @@
         
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <Product>Error Flow</Product>
-        <Version>1.1.5</Version>
+        <Version>1.1.6</Version>
         <Authors>lastunicorn</Authors>
         <Company>Dust in the Wind</Company>
         <Copyright>Copyright © 2025 Dust in the Wind</Copyright>
