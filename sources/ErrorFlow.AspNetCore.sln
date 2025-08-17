@@ -5,6 +5,13 @@ VisualStudioVersion = 17.14.36202.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorFlow.AspNetCore", "ErrorFlow\ErrorFlow.AspNetCore.csproj", "{12042883-E990-EDDF-2344-387FB79C840E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorFlow.AspNetCore.Tests", "ErrorFlow.AspNetCore.Tests\ErrorFlow.AspNetCore.Tests.csproj", "{C41EAC7E-55C7-4D11-99BF-AC53D835C55D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{12042883-E990-EDDF-2344-387FB79C840E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12042883-E990-EDDF-2344-387FB79C840E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12042883-E990-EDDF-2344-387FB79C840E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C41EAC7E-55C7-4D11-99BF-AC53D835C55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C41EAC7E-55C7-4D11-99BF-AC53D835C55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C41EAC7E-55C7-4D11-99BF-AC53D835C55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C41EAC7E-55C7-4D11-99BF-AC53D835C55D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

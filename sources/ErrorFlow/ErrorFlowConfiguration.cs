@@ -33,6 +33,9 @@ public class ErrorFlowConfiguration
 
     public ErrorFlowConfiguration AddErrorHandlersFromAssembly(params Assembly[] assemblies)
     {
+        if (assemblies == null)
+            return this;
+
         IEnumerable<(Type, Type)> errorHandlers = assemblies
             .Where(x => x is not null)
             .SelectMany(x => x.GetTypes())

@@ -18,7 +18,8 @@ internal class ErrorHandlerTypeCollection
         if (!isErrorHandlerType)
             throw new ArgumentException($"The type {errorHandlerType.FullName} must implement IErrorHandler<{errorType.Name}>.", nameof(errorHandlerType));
 
-        types.Add(errorType, errorHandlerType);
+        // Use indexer instead of Add to allow overwriting existing registrations
+        types[errorType] = errorHandlerType;
     }
 
     public Type GetErrorHandlerType<T>(T error)

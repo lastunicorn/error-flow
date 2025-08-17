@@ -27,4 +27,8 @@
         </None>
     </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="DustInTheWind.ErrorFlow.AspNetCore.Tests"/>
+    </ItemGroup>
+
 </Project>
