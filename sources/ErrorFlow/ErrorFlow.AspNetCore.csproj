@@ -2,24 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
         <AssemblyName>DustInTheWind.$(MSBuildProjectName)</AssemblyName>
         <RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-        
+
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <Product>Error Flow</Product>
-        <Version>1.1.6</Version>
-        <Authors>lastunicorn</Authors>
-        <Company>Dust in the Wind</Company>
-        <Copyright>Copyright © 2025 Dust in the Wind</Copyright>
         <Description>A framework to easily handle exceptions and translate them to HTTP responses in a Web API application.</Description>
 
-        <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/lastunicorn/error-flow</RepositoryUrl>
-        
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
 
     <ItemGroup>
         <None Include="..\..\LICENSE">
@@ -30,11 +25,6 @@
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
     </ItemGroup>
 
 </Project>

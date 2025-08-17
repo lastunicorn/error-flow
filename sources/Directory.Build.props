@@ -1,0 +1,18 @@
+<Project>
+
+    <PropertyGroup>
+        <Company>Dust in the Wind</Company>
+        <Product>Error Flow</Product>
+        <Copyright>Copyright © 2025 Dust in the Wind</Copyright>
+        <Version>1.2.1</Version>
+        <Authors>lastunicorn</Authors>
+        <NeutralLanguage>en</NeutralLanguage>
+        <RepositoryType>git</RepositoryType>
+
+        <PackageProjectUrl>https://github.com/lastunicorn/error-flow</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/lastunicorn/error-flow</RepositoryUrl>
+
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+</Project>

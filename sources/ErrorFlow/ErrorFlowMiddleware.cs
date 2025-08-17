@@ -1,4 +1,5 @@
 ﻿using DustInTheWind.ErrorFlow.AspNetCore.Core;
+using DustInTheWind.ErrorFlow.AspNetCore.Helpers;
 using Microsoft.AspNetCore.Http;
 
 namespace DustInTheWind.ErrorFlow.AspNetCore;
@@ -6,12 +7,12 @@ namespace DustInTheWind.ErrorFlow.AspNetCore;
 internal class ErrorFlowMiddleware
 {
     private readonly RequestDelegate next;
-    private readonly ErrorHandlingEngine exceptionHandler;
+    private readonly ErrorHandlingEngine errorHandlingEngine;
 
-    public ErrorFlowMiddleware(RequestDelegate next, ErrorHandlingEngine exceptionHandler)
+    public ErrorFlowMiddleware(RequestDelegate next, ErrorHandlingEngine errorHandlingEngine)
     {
         this.next = next ?? throw new ArgumentNullException(nameof(next));
-        this.exceptionHandler = exceptionHandler ?? throw new ArgumentNullException(nameof(exceptionHandler));
+        this.errorHandlingEngine = errorHandlingEngine ?? throw new ArgumentNullException(nameof(errorHandlingEngine));
     }
 
     public async Task InvokeAsync(HttpContext context)
@@ -22,7 +23,7 @@ internal class ErrorFlowMiddleware
         }
         catch (Exception ex)
         {
-            await exceptionHandler.Handle(context, ex);
+            await errorHandlingEngine.Handle(context, ex);
         }
     }
 }

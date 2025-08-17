@@ -4,8 +4,7 @@ using System.Text.Json;
 
 namespace DustInTheWind.ErrorFlow.AspNetCore;
 
-[Obsolete("Use the generic ErrorHandler<TException, TResponseBody> instead.")]
-public abstract class JsonErrorHandler<TException, TResponseBody> : IErrorHandler<TException>
+public abstract class ErrorHandler<TException, TResponseBody> : IErrorHandler<TException>
     where TException : Exception
 {
     protected abstract HttpStatusCode HttpStatusCode { get; }

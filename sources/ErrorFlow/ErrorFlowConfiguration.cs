@@ -62,6 +62,12 @@ public class ErrorFlowConfiguration
         return this;
     }
 
+    public ErrorFlowConfiguration UseExplicitMode(bool useExplicitMode = true)
+    {
+        engine.UseExplicitMode = useExplicitMode;
+        return this;
+    }
+
     private static IEnumerable<(Type, Type)> EnumerateErrorHandlerTypes(Type type)
     {
         Type errorHandlerInterfaceType = typeof(IErrorHandler<>);
