@@ -6,7 +6,7 @@
         <RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
 
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <Description>A framework to easily handle exceptions and translate them to HTTP responses in a Web API application.</Description>
+        <Description>A framework to easily handle exceptions and translate them to HTTP responses in a ASP.NET Core Web API application.</Description>
 
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>

@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ErrorFlow\ErrorFlow.AspNetCore.csproj" />
+        <ProjectReference Include="..\ErrorFlow.AspNetCore\ErrorFlow.AspNetCore.csproj" />
     </ItemGroup>
 
     <ItemGroup>
